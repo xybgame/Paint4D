@@ -1,6 +1,8 @@
 <RCC>
     <qresource prefix="/shader">
-        <file>Shader/base.fsh</file>
-        <file>Shader/base.vsh</file>
+        <file>Shader/canvas.fsh</file>
+        <file>Shader/canvas.vsh</file>
+        <file>Shader/id.fsh</file>
+        <file>Shader/id.vsh</file>
     </qresource>
 </RCC>

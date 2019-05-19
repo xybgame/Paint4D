@@ -23,10 +23,24 @@ public:
 
     XYBTriangle *trianglelist;
 public:
-    void xyb_Create(QString path, QString vspath, QString fspath);
-    void xyb_InitGL();
-    void xyb_UpdateGL(GLenum drawtype);
-    void xyb_ResizeGL(float w,float h);
+    void xyb_Create     (QString path, QString vspath, QString fspath);
+    void xyb_InitGL     ();
+    void xyb_UpdateGL   (GLenum drawtype);
+    void xyb_ResizeGL   (float w,float h);
 };
 
+class PaintFBO:XYBOPENGL
+{
+public:
+
+};
+
+struct XYBEvent
+{
+    PaintCanvas *idcanvas;
+    PaintCanvas *canvas;
+    int x,y=0;
+    bool ispress=false;
+    float w,h=0;
+};
 #endif // PAINTCANVAS_H
