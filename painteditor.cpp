@@ -13,9 +13,9 @@ void PaintEditor::initializeGL  ()
     glEnable(GL_DEPTH_TEST);
     glClear(GL_DEPTH_BUFFER_BIT|GL_COLOR_BUFFER_BIT);
 
-    canvas.xyb_Create("C:\\Users\\xiangyubo\\Documents\\Paint4D\\Model\\sphere.obj",
-                      "C:\\Users\\xiangyubo\\Documents\\Paint4D\\Shader\\base.vsh",
-                      "C:\\Users\\xiangyubo\\Documents\\Paint4D\\Shader\\base.fsh");
+    canvas.xyb_Create("C:\\Users\\xiangyubo\\Desktop\\Git\\Paint4D\\Model\\sphere.obj",
+                      "C:\\Users\\xiangyubo\\Desktop\\Git\\Paint4D\\Shader\\base.vsh",
+                      "C:\\Users\\xiangyubo\\Desktop\\Git\\Paint4D\\Shader\\base.fsh");
     canvas.xyb_InitGL();
 }
 void PaintEditor::paintGL       ()

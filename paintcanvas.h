@@ -9,6 +9,7 @@
 
 #define XYBOPENGL public QOpenGLFunctions_4_4_Core
 
+
 class PaintCanvas:XYBOPENGL
 {
 private:
