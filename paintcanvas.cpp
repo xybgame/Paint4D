@@ -6,7 +6,7 @@ void PaintCanvas::xyb_Create(QString path, QString vspath, QString fspath)
     //初始化基本矩阵
     {
         pers    .xyb_SetPerspective (1,45,10,1000);
-        trans   .xyb_SetTranslate   (0,0,10);
+        trans   .xyb_SetTranslate   (0,0,0);
         scale   .xyb_SetScale       (1,1,1);
         rotx    .xyb_SetRotX        (0);
         roty    .xyb_SetRotY        (0);
