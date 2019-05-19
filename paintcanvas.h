@@ -29,14 +29,11 @@ public:
     void xyb_ResizeGL   (float w,float h);
 };
 
-class PaintFBO:XYBOPENGL
-{
-public:
-
-};
-
+//事件信息传递类
 struct XYBEvent
 {
+    QMouseEvent *mouseevent;
+    QKeyEvent   *keyevent;
     PaintCanvas *idcanvas;
     PaintCanvas *canvas;
     int x,y=0;

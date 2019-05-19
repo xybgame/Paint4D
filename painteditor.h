@@ -1,9 +1,6 @@
 ﻿#ifndef PAINTEDITOR_H
 #define PAINTEDITOR_H
 
-#include <QMouseEvent>
-#include <QVector>
-
 #include "Component/componentcanvascontrol.h"
 
 class PaintEditor : public QOpenGLWidget,XYBOPENGL

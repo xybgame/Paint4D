@@ -1,6 +1,10 @@
 ﻿#ifndef XYBMATH_H
 #define XYBMATH_H
 
+#include <QUuid>
+#include <QMouseEvent>
+#include <QKeyEvent>
+#include <QVector>
 #include <QtMath>
 #include <QDebug>
 

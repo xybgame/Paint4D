@@ -1,7 +1,6 @@
 ﻿#ifndef COMPONENT_H
 #define COMPONENT_H
 
-#include <QUuid>
 #include "paintcanvas.h"
 
 class Component

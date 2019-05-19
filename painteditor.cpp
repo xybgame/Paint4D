@@ -49,7 +49,6 @@ void PaintEditor::paintGL       ()
 {
     glClear(GL_DEPTH_BUFFER_BIT|GL_COLOR_BUFFER_BIT);
 
-    idcanvas      .trans.xyb_SetTranslate   (0,0,10);
     idcanvas      .xyb_UpdateGL       (GL_LINE_LOOP);
 
     //canvas      .trans.xyb_SetTranslate   (3,0,10);
@@ -88,6 +87,8 @@ void PaintEditor::resizeGL      (int w, int h)
 
 void PaintEditor::mousePressEvent       (QMouseEvent *event)
 {
+    //event赋值
+    e.mouseevent=event;
     /*执行Component*/
     {
         uint i=0;
@@ -101,6 +102,8 @@ void PaintEditor::mousePressEvent       (QMouseEvent *event)
 }
 void PaintEditor::mouseReleaseEvent     (QMouseEvent *event)
 {
+    //event赋值
+    e.mouseevent=event;
     /*执行Component*/
     {
         uint i=0;
@@ -115,6 +118,7 @@ void PaintEditor::mouseReleaseEvent     (QMouseEvent *event)
 void PaintEditor::mouseMoveEvent        (QMouseEvent *event)
 {
     //event赋值
+    e.mouseevent=event;
     e.x=event           ->x();
     e.y=height()-event  ->y();
 
