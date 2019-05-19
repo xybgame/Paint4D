@@ -53,3 +53,22 @@ void ComponentCanvasControl::xyb_MouseRelease   (XYBEvent &e)
 {
 
 }
+
+void ComponentCanvasControl::xyb_KeyPress       (XYBEvent &e)
+{
+    switch (e.keyevent->key())
+    {
+    case Qt::Key_F:
+    {//清空位移，恢复初始状态
+            x=y=z=begin_x=begin_y=0;
+            e.idcanvas->rotx.xyb_SetRotX(0);
+            e.idcanvas->roty.xyb_SetRotY(0);
+            e.idcanvas->trans.xyb_SetTranslate(0,0,0);
+    }
+        break;
+    }
+}
+void ComponentCanvasControl::xyb_KeyRelease     (XYBEvent &e)
+{
+
+}

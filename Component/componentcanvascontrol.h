@@ -19,6 +19,8 @@ public:
     void xyb_MouseMove      (XYBEvent &e);
     void xyb_MousePress     (XYBEvent &e);
     void xyb_MouseRelease   (XYBEvent &e);
+    void xyb_KeyPress       (XYBEvent &e);
+    void xyb_KeyRelease     (XYBEvent &e);
 };
 
 #endif // COMPONENTCANVASCONTROL_H

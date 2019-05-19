@@ -20,6 +20,8 @@ public:
     virtual void xyb_MouseMove      (XYBEvent &e){}
     virtual void xyb_MousePress     (XYBEvent &e){}
     virtual void xyb_MouseRelease   (XYBEvent &e){}
+    virtual void xyb_KeyPress       (XYBEvent &e){}
+    virtual void xyb_KeyRelease     (XYBEvent &e){}
 };
 
 #endif // COMPONENT_H
