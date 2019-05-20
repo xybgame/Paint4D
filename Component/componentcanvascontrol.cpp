@@ -9,16 +9,9 @@ ComponentCanvasControl::ComponentCanvasControl()
 void ComponentCanvasControl::xyb_Init   (XYBEvent &e)
 {
     x=y=z=begin_x=begin_y=0;
-    sensitivity_rot=0.001f;
+    sensitivity_rot=0.0001f;
     sensitivity_trans=0.001f;
-}
-void ComponentCanvasControl::xyb_Update (XYBEvent &e)
-{
-
-}
-void ComponentCanvasControl::xyb_Resize (XYBEvent &e)
-{
-
+    is_alt=false;
 }
 
 void ComponentCanvasControl::xyb_MouseMove      (XYBEvent &e)
@@ -27,19 +20,22 @@ void ComponentCanvasControl::xyb_MouseMove      (XYBEvent &e)
     {
     case Qt::LeftButton:
         {
-            float offset_x=begin_x-e.mouseevent->x();
-            float offset_y=begin_y-e.mouseevent->y();
-            x+=offset_x*sensitivity_rot;
-            y+=offset_y*sensitivity_rot;
-            e.idcanvas->rotx.xyb_SetRotX(y);
-            e.idcanvas->roty.xyb_SetRotY(x);
+            if(is_alt==true)
+            {
+                float offset_x=begin_x-e.mouseevent->x();
+                x+=offset_x*sensitivity_rot;
+                e.canvas->roty.xyb_SetRotY(x);
+                float offset_y=begin_y-e.mouseevent->y();
+                y-=offset_y*sensitivity_rot;
+                e.canvas->rotx.xyb_SetRotX(y);
+            }
         }
         break;
     case Qt::MidButton:
         {
             float offset_y=begin_y-e.mouseevent->y();
             z+=offset_y*sensitivity_trans;
-            e.idcanvas->trans.xyb_SetTranslate(0,0,z);
+            e.canvas->trans.xyb_SetTranslate(0,0,z);
         }
         break;
     }
@@ -49,10 +45,6 @@ void ComponentCanvasControl::xyb_MousePress     (XYBEvent &e)
     begin_x=e.mouseevent->x();
     begin_y=e.mouseevent->y();
 }
-void ComponentCanvasControl::xyb_MouseRelease   (XYBEvent &e)
-{
-
-}
 
 void ComponentCanvasControl::xyb_KeyPress       (XYBEvent &e)
 {
@@ -61,14 +53,26 @@ void ComponentCanvasControl::xyb_KeyPress       (XYBEvent &e)
     case Qt::Key_F:
     {//清空位移，恢复初始状态
             x=y=z=begin_x=begin_y=0;
-            e.idcanvas->rotx.xyb_SetRotX(0);
-            e.idcanvas->roty.xyb_SetRotY(0);
-            e.idcanvas->trans.xyb_SetTranslate(0,0,0);
+            e.canvas->rotx.xyb_SetRotX(0);
+            e.canvas->roty.xyb_SetRotY(0);
+            e.canvas->trans.xyb_SetTranslate(0,0,0);
+    }
+        break;
+    case Qt::Key_Alt:
+    {
+        is_alt=true;
     }
         break;
     }
 }
 void ComponentCanvasControl::xyb_KeyRelease     (XYBEvent &e)
 {
-
+    switch (e.keyevent->key())
+    {
+    case Qt::Key_Alt:
+    {
+        is_alt=false;
+    }
+        break;
+    }
 }

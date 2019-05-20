@@ -31,7 +31,9 @@ SOURCES += \
     xybmodel.cpp \
     paintcanvas.cpp \
     painteditor.cpp \
-    Component/componentcanvascontrol.cpp
+    Component/componentcanvascontrol.cpp \
+    Component/componentpen.cpp \
+    Component/componentcanvas.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -40,7 +42,9 @@ HEADERS += \
     paintcanvas.h \
     painteditor.h \
     Component/component.h \
-    Component/componentcanvascontrol.h
+    Component/componentcanvascontrol.h \
+    Component/componentpen.h \
+    Component/componentcanvas.h
 
 FORMS += \
         mainwindow.ui
