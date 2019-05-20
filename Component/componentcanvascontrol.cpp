@@ -6,7 +6,7 @@ ComponentCanvasControl::ComponentCanvasControl()
     type="ComponentCanvasControl";
 }
 
-void ComponentCanvasControl::xyb_Init   (XYBEvent &e)
+void ComponentCanvasControl::xyb_Init           (XYBEvent &e)
 {
     x=y=z=begin_x=begin_y=0;
     sensitivity_rot=0.0001f;
