@@ -22,6 +22,10 @@ protected:
     void mousePressEvent        (QMouseEvent *event);
     void mouseReleaseEvent      (QMouseEvent *event);
     void mouseMoveEvent         (QMouseEvent *event);
+public:
+    void keyPressEvent  (QKeyEvent *event);
+    void keyReleaseEvent(QKeyEvent *event);
+
 };
 
 #endif // PAINTEDITOR_H

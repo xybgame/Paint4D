@@ -100,8 +100,6 @@ void PaintEditor::mouseReleaseEvent     (QMouseEvent *event)
 void PaintEditor::mouseMoveEvent        (QMouseEvent *event)
 {
     e.mouseevent=event;
-    e.x=event           ->x();
-    e.y=height()-event  ->y();
 
     /*执行Component*/
     {
@@ -110,6 +108,35 @@ void PaintEditor::mouseMoveEvent        (QMouseEvent *event)
         for (; i < length; ++i)
         {
             com.value(i)->xyb_MouseMove(e);
+        }
+    }
+    this->update();
+}
+
+void PaintEditor::keyPressEvent         (QKeyEvent *event)
+{
+    e.keyevent=event;
+    /*执行Component*/
+    {
+        uint i=0;
+        uint length=com.length();
+        for (; i < length; ++i)
+        {
+            com.value(i)->xyb_KeyPress(e);
+        }
+    }
+    this->update();
+}
+void PaintEditor::keyReleaseEvent       (QKeyEvent *event)
+{
+    e.keyevent=event;
+    /*执行Component*/
+    {
+        uint i=0;
+        uint length=com.length();
+        for (; i < length; ++i)
+        {
+            com.value(i)->xyb_KeyRelease(e);
         }
     }
     this->update();

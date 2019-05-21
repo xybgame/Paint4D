@@ -42,6 +42,18 @@ void PaintCanvas::xyb_Create(QString path, QString vspath, QString fspath)
     }
 }
 
+void PaintCanvas::xyb_CreateTexture(QString path)
+{
+    img=new QImage(path);
+    glGenTextures(1,&mtexture);
+    glBindTexture(GL_TEXTURE_2D,mtexture);
+    glTexImage2D(GL_TEXTURE_2D,0,GL_RGBA,img->width(),img->height(),0,GL_RGBA,GL_UNSIGNED_BYTE,img->bits());
+    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S,GL_REPEAT);
+    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T,GL_REPEAT);
+}
+
 void PaintCanvas::xyb_UpdateGL  (GLenum drawtype)
 {
     glUseProgram(program);
@@ -52,6 +64,10 @@ void PaintCanvas::xyb_UpdateGL  (GLenum drawtype)
     glUniformMatrix4fv(mrotx,   1,false,&rotx   .data[0][0]);
     glUniformMatrix4fv(mroty,   1,false,&roty   .data[0][0]);
     glUniformMatrix4fv(mscale,  1,false,&scale  .data[0][0]);
+
+    glActiveTexture(GL_TEXTURE_2D);
+    glBindTexture(GL_TEXTURE_2D,mtexture);
+    glUniform1i(tex,0);
 
     glEnableVertexAttribArray(pos);
     glEnableVertexAttribArray(nor);
@@ -111,6 +127,8 @@ void PaintCanvas::xyb_InitGL    ()
     mscale  =glGetUniformLocation(program,"scale"   );
     mrotx   =glGetUniformLocation(program,"rotx"    );
     mroty   =glGetUniformLocation(program,"roty"    );
+
+    tex     =glGetUniformLocation(program,"tex"     );
 
     //vertex buffer
     {
