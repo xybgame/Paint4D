@@ -8,10 +8,10 @@ ComponentCanvasControl::ComponentCanvasControl()
 
 void ComponentCanvasControl::xyb_Init           (XYBEvent &e)
 {
-    x=y=z=begin_x=begin_y=0;
-    sensitivity_rot=0.0001f;
-    sensitivity_trans=0.001f;
-    is_alt=false;
+    x=y=z=begin_x=begin_y   =0;
+    sensitivity_rot         =0.0001f;
+    sensitivity_trans       =0.001f;
+    is_alt                  =false;
 }
 
 void ComponentCanvasControl::xyb_MouseMove      (XYBEvent &e)

@@ -479,6 +479,7 @@ debug\moc_painteditor.cpp: ..\Component\componentcanvascontrol.h \
 		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\qopenglcontext.h \
 		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\QScopedPointer \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\QImage \
 		..\xybmodel.h \
 		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\QFile \
 		G:\assimp-master\include\assimp\Importer.hpp \
@@ -520,6 +521,7 @@ debug\moc_painteditor.cpp: ..\Component\componentcanvascontrol.h \
 		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qmath.h \
 		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\QDebug \
 		..\Component\componentcanvas.h \
+		..\Component\componentpen.h \
 		..\painteditor.h \
 		debug\moc_predefs.h \
 		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\bin\moc.exe
@@ -1126,6 +1128,7 @@ debug\paintcanvas.obj: ..\paintcanvas.cpp ..\paintcanvas.h \
 		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\qopenglcontext.h \
 		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\QScopedPointer \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\QImage \
 		..\xybmodel.h \
 		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\QFile \
 		G:\assimp-master\include\assimp\Importer.hpp \
@@ -1294,6 +1297,7 @@ debug\painteditor.obj: ..\painteditor.cpp ..\painteditor.h \
 		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\qopenglcontext.h \
 		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\QScopedPointer \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\QImage \
 		..\xybmodel.h \
 		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\QFile \
 		G:\assimp-master\include\assimp\Importer.hpp \
@@ -1334,7 +1338,8 @@ debug\painteditor.obj: ..\painteditor.cpp ..\painteditor.h \
 		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\QtMath \
 		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qmath.h \
 		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\QDebug \
-		..\Component\componentcanvas.h
+		..\Component\componentcanvas.h \
+		..\Component\componentpen.h
 
 debug\componentcanvascontrol.obj: ..\Component\componentcanvascontrol.cpp ..\Component\componentcanvascontrol.h \
 		..\Component\component.h \
@@ -1462,6 +1467,7 @@ debug\componentcanvascontrol.obj: ..\Component\componentcanvascontrol.cpp ..\Com
 		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\qopenglcontext.h \
 		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\QScopedPointer \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\QImage \
 		..\xybmodel.h \
 		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\QFile \
 		G:\assimp-master\include\assimp\Importer.hpp \
@@ -1503,7 +1509,173 @@ debug\componentcanvascontrol.obj: ..\Component\componentcanvascontrol.cpp ..\Com
 		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qmath.h \
 		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\QDebug
 
-debug\componentpen.obj: ..\Component\componentpen.cpp ..\Component\componentpen.h
+debug\componentpen.obj: ..\Component\componentpen.cpp ..\Component\componentpen.h \
+		..\Component\component.h \
+		..\paintcanvas.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtWidgets\QOpenGLWidget \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtWidgets\qopenglwidget.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\qtguiglobal.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qglobal.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qconfig-bootstrapped.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qconfig.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qtcore-config.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qsystemdetection.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qprocessordetection.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qcompilerdetection.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qtypeinfo.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qsysinfo.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qlogging.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qflags.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qatomic.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qbasicatomic.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qatomic_bootstrap.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qgenericatomic.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qatomic_cxx11.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qatomic_msvc.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qglobalstatic.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qmutex.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qnumeric.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qversiontagging.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\qtgui-config.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtWidgets\qtwidgets-config.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtWidgets\QWidget \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtWidgets\qwidget.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\qwindowdefs.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qobjectdefs.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qnamespace.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qobjectdefs_impl.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\qwindowdefs_win.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qobject.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qstring.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qchar.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qbytearray.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qrefcount.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qarraydata.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qstringliteral.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qstringalgorithms.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qstringview.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qstringbuilder.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qlist.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qalgorithms.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qiterator.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qhashfunctions.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qpair.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qbytearraylist.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qstringlist.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qregexp.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qstringmatcher.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qcoreevent.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qscopedpointer.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qmetatype.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qvarlengtharray.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qcontainerfwd.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qobject_impl.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qmargins.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\qpaintdevice.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qrect.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qsize.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qpoint.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\qpalette.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\qcolor.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\qrgb.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\qrgba64.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\qbrush.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qvector.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\qmatrix.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\qpolygon.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\qregion.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qdatastream.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qiodevice.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qline.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\qtransform.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\qpainterpath.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\qimage.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\qpixelformat.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\qpixmap.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qsharedpointer.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qshareddata.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qhash.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\qfont.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\qfontmetrics.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\qfontinfo.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtWidgets\qsizepolicy.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\qcursor.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\qkeysequence.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\qevent.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qvariant.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qmap.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qdebug.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qtextstream.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qlocale.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qset.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qcontiguouscache.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qurl.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qurlquery.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qfile.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qfiledevice.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\qvector2d.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\qtouchdevice.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\QSurfaceFormat \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\qsurfaceformat.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\qopengl.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qt_windows.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtANGLE\GLES3\gl3.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtANGLE\GLES3\gl3platform.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtANGLE\KHR\khrplatform.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtANGLE\GLES2\gl2.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtANGLE\GLES2\gl2platform.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\qopengles2ext.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\qopenglext.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\QOpenGLFunctions_4_4_Core \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\qopenglfunctions_4_4_core.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\QOpenGLVersionFunctions \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\qopenglversionfunctions.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\qopenglcontext.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\QObject \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\QScopedPointer \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\QImage \
+		..\xybmodel.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\QFile \
+		G:\assimp-master\include\assimp\Importer.hpp \
+		G:\assimp-master\include\assimp\types.h \
+		G:\assimp-master\include\assimp\defs.h \
+		G:\assimp-master\include\assimp\config.h \
+		G:\assimp-master\include\assimp\vector3.h \
+		G:\assimp-master\include\assimp\vector2.h \
+		G:\assimp-master\include\assimp\color4.h \
+		G:\assimp-master\include\assimp\matrix3x3.h \
+		G:\assimp-master\include\assimp\matrix4x4.h \
+		G:\assimp-master\include\assimp\quaternion.h \
+		G:\assimp-master\include\assimp\vector2.inl \
+		G:\assimp-master\include\assimp\vector3.inl \
+		G:\assimp-master\include\assimp\color4.inl \
+		G:\assimp-master\include\assimp\quaternion.inl \
+		G:\assimp-master\include\assimp\matrix3x3.inl \
+		G:\assimp-master\include\assimp\matrix4x4.inl \
+		G:\assimp-master\include\assimp\scene.h \
+		G:\assimp-master\include\assimp\texture.h \
+		G:\assimp-master\include\assimp\Compiler\pushpack1.h \
+		G:\assimp-master\include\assimp\Compiler\poppack1.h \
+		G:\assimp-master\include\assimp\mesh.h \
+		G:\assimp-master\include\assimp\light.h \
+		G:\assimp-master\include\assimp\camera.h \
+		G:\assimp-master\include\assimp\material.h \
+		G:\assimp-master\include\assimp\material.inl \
+		G:\assimp-master\include\assimp\anim.h \
+		G:\assimp-master\include\assimp\metadata.h \
+		G:\assimp-master\include\assimp\Compiler\pstdint.h \
+		G:\assimp-master\include\assimp\postprocess.h \
+		..\xybmath.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\QUuid \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\quuid.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\QMouseEvent \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\QKeyEvent \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\QVector \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\QtMath \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\qmath.h \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\QDebug
 
 debug\componentcanvas.obj: ..\Component\componentcanvas.cpp ..\Component\componentcanvas.h \
 		..\Component\component.h \
@@ -1631,6 +1803,7 @@ debug\componentcanvas.obj: ..\Component\componentcanvas.cpp ..\Component\compone
 		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\qopenglcontext.h \
 		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\QObject \
 		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\QScopedPointer \
+		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtGui\QImage \
 		..\xybmodel.h \
 		C:\Qt\Qt5.12.0\5.12.0\msvc2017_64\include\QtCore\QFile \
 		G:\assimp-master\include\assimp\Importer.hpp \

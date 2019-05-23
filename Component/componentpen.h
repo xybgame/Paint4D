@@ -10,10 +10,10 @@ public:
 
     // Component interface
 public:
-    void xyb_Init           (XYBEvent &e);
-    void xyb_Update         (XYBEvent &e);
-    void xyb_Resize         (XYBEvent &e);
-    void xyb_MouseMove      (XYBEvent &e)XYB_UNUSED
+    void xyb_Init           (XYBEvent &e)XYB_UNUSED
+    void xyb_Update         (XYBEvent &e)XYB_UNUSED
+    void xyb_Resize         (XYBEvent &e)XYB_UNUSED
+    void xyb_MouseMove      (XYBEvent &e);
     void xyb_MousePress     (XYBEvent &e)XYB_UNUSED
     void xyb_MouseRelease   (XYBEvent &e)XYB_UNUSED
     void xyb_KeyPress       (XYBEvent &e)XYB_UNUSED

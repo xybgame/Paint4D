@@ -32,6 +32,8 @@ public:
     void xyb_SetScale       (Xfloat x,Xfloat y,Xfloat z);
     void xyb_SetRotX        (Xfloat angle);
     void xyb_SetRotY        (Xfloat angle);
+
+    void xyb_SetInvertPerspective   (Xfloat aspect,Xfloat fovy,Xfloat n,Xfloat f);
 public:
     XYBMatrix4x4    operator *  (XYBMatrix4x4 m);
 };

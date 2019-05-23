@@ -27,6 +27,7 @@ public:
 public:
     void xyb_Create         (QString path, QString vspath, QString fspath);
     void xyb_CreateTexture  (QString path);
+    void xyb_UpdateTexture  (float w,float h,float x,float y,uchar*data);
     void xyb_InitGL         ();
     void xyb_UpdateGL       (GLenum drawtype);
     void xyb_ResizeGL       (float w,float h);

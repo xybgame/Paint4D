@@ -54,6 +54,13 @@ void PaintCanvas::xyb_CreateTexture(QString path)
     glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T,GL_REPEAT);
 }
 
+void PaintCanvas::xyb_UpdateTexture(float w, float h, float x, float y, uchar *data)
+{
+    glBindTexture(GL_TEXTURE_2D,mtexture);
+    glTexSubImage2D(GL_TEXTURE_2D,0,x,y,w,h,GL_RGBA,GL_UNSIGNED_BYTE,data);
+    delete []data;
+}
+
 void PaintCanvas::xyb_UpdateGL  (GLenum drawtype)
 {
     glUseProgram(program);

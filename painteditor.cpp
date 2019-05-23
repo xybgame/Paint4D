@@ -13,6 +13,8 @@ PaintEditor::PaintEditor(QWidget *parent)
     {
         ComponentCanvas         *drawcanvas=new ComponentCanvas();
         com.append(drawcanvas);
+        ComponentPen            *brushpen=new ComponentPen();
+        com.append(brushpen);
         ComponentCanvasControl *control=new ComponentCanvasControl();
         com.append(control);
     }

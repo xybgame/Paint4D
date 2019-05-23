@@ -3,6 +3,7 @@
 
 #include "Component/componentcanvascontrol.h"
 #include "Component/componentcanvas.h"
+#include "Component/componentpen.h"
 
 class PaintEditor : public QOpenGLWidget,XYBOPENGL
 {

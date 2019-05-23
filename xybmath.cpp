@@ -81,6 +81,16 @@ void XYBMatrix4x4::xyb_SetRotY          (float angle)
                 0,0,0,1);
 }
 
+void XYBMatrix4x4::xyb_SetInvertPerspective(float aspect, float fovy, float n, float f)
+{
+    float a=qTan(fovy*0.5);
+    float fmn=f-n;
+    xyb_SetData(a,0,0,0,
+                0,a/aspect,0,0,
+                0,0,0,1,
+                0,0,-fmn/n,-1/fmn);
+}
+
 XYBMatrix4x4    XYBMatrix4x4::operator *    (XYBMatrix4x4 m)
 {
     XYBMatrix4x4 r;
@@ -152,7 +162,7 @@ XYBVec4 XYBVec4::operator * (XYBMatrix4x4 m)
     {
         for (int k = 0; k < 4; ++k)
         {
-            r.data[j]+=data[j]*m.data[k][j];
+            r.data[j]+=data[k]*m.data[k][j];
         }
     }
     return r;

@@ -2,15 +2,11 @@
 
 ComponentPen::ComponentPen()
 {
-
+    id=QUuid::createUuid().toString();
+    type="ComponentPen";
 }
 
-void ComponentPen::xyb_Init     (XYBEvent &e)
+void ComponentPen::xyb_MouseMove(XYBEvent &e)
 {
-}
-void ComponentPen::xyb_Update   (XYBEvent &e)
-{
-}
-void ComponentPen::xyb_Resize   (XYBEvent &e)
-{
+
 }
